@@ -1,4 +1,4 @@
-
+'''
 #11/09/2026
 #------------------------------------TASK-1-----------------------------------------------------------
 import random
@@ -49,9 +49,8 @@ elif player2_score > player1_score:
 else:
     print("Match Tie")
 
-
 #---------------------------------------TASK-2---------------------------------------------------
-
+'''
 
 import random
 
@@ -78,18 +77,26 @@ def guessing_game():
     print("Number Guessing Game")
 
     number = random.randint(1, 10)
-    print("Computer given number:", number)
 
-    guess = int(input("Guess a number between 1 and 10: "))
-    print("Your guessed number:", guess)
-    print("Computer given number:", number)
+    for i in range(5):
+        guess = int(input("Guess the number between 1 and 10: "))
 
+        print("Your guessed number:", guess)
 
+        if guess == number:
+            print("Correct! You won")
+            break
 
-    if guess == number:
-        print("Correct! You won")
+        elif guess > number:
+            print("Your guess is greater than the number")
+
+        else:
+            print("Your guess is less than the number")
+
     else:
-        print("Wrong! The number was", number)
+        print("You lost!")
+        print("The correct number was:", number)
+
 
 
 def study():
@@ -110,3 +117,4 @@ elif choice == 3:
 
 else:
     print("No choice")
+
